@@ -10,6 +10,11 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     String idLove = "Love";
+    //NotificationChannel是26 android 8.0以後才出的API
+    //minSdkVersion要改成 26
+    /*
+    產生如果手機在8.0以前的都不能跑,所以要設定判斷版本
+     */
     NotificationChannel channelLove;
     NotificationManager nm;
     @Override
