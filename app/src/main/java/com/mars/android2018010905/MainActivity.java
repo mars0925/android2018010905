@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setSmallIcon(R.drawable.ic_launcher_foreground);
         Notification notify = builder.build();
         nm.notify(1, notify);
+        //
 
     }
 }
