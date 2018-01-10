@@ -10,7 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    //宣告 notification_id = 21311 讓程式好閱讀
+    final int notification_id = 21311;
     String idLove = "Love";
     //NotificationChannel是26 android 8.0以後才出的API
     //minSdkVersion要改成 26
@@ -76,8 +77,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Notification notify = builder.build();
-        nm.notify(1, notify);
+        //使用者點完之後會自動取消
+        builder.setAutoCancel(true);
+        //id:note的id
+        nm.notify(notification_id, notify);
 
-
+    }
+    public void click2 (View V)
+    {
+        nm.cancel(notification_id);
     }
 }
